@@ -1,0 +1,12 @@
+{
+  "name": "gitbook-plugin-katex-auto-render",
+  "version": "0.0.1",
+  "description": "Enable auto-rendering of LaTeX blocks with KaTeX.",
+  "engines": {
+    "gitbook": ">1.x.x"
+  },
+  "gitbook": {
+    "properties": {
+    }
+  }
+}
