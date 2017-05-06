@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function renderMathInBody() {
   var katexOpts = {
     delimiters: [
       {left: "$$", right: "$$", display: false},
@@ -7,4 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     ]
   };
   window.renderMathInElement(document.body, katexOpts);
+}
+
+// Render math when the page is loaded and on subsequent navigations
+// (navigations change the content of the DOM)
+document.addEventListener("DOMContentLoaded", renderMathInBody);
+require(["gitbook"], function(gitbook) {
+  gitbook.events.bind("page.change", renderMathInBody);
 });
