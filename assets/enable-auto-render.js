@@ -1,9 +1,14 @@
 function renderMathInBody() {
+  // This will be rendered in display mode:
+  //   $$
+  //   x = y
+  //   $$
+  // This will be rendered in inline mode:
+  //   $$x = y$$
   var katexOpts = {
     delimiters: [
-      {left: "$$", right: "$$", display: false},
-      {left: "\\[", right: "\\]", display: true},
-      {left: "\\(", right: "\\)", display: false}
+      {left: "$$\n", right: "$$", display: true},
+      {left: "$$", right: "$$", display: false}
     ]
   };
   window.renderMathInElement(document.body, katexOpts);
